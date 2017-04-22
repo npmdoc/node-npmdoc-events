@@ -1,0 +1,714 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/Gozala/events#readme"
+
+    >events (v1.1.1)</a>
+</h1>
+<h4>Node's event emitter for all engines.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.events">module events</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.events">
+            function <span class="apidocSignatureSpan"></span>events
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter">
+            function <span class="apidocSignatureSpan">events.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.listenerCount">
+            function <span class="apidocSignatureSpan">events.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">events.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">events.</span>EventEmitter.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.events.EventEmitter">module events.EventEmitter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter.EventEmitter">
+            function <span class="apidocSignatureSpan">events.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter.listenerCount">
+            function <span class="apidocSignatureSpan">events.EventEmitter.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">events.EventEmitter.</span>defaultMaxListeners</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.events.EventEmitter.prototype">module events.EventEmitter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter.prototype.addListener">
+            function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>addListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter.prototype.emit">
+            function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>emit
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter.prototype.listenerCount">
+            function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>listenerCount
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter.prototype.listeners">
+            function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>listeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter.prototype.on">
+            function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>on
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter.prototype.once">
+            function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>once
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter.prototype.removeAllListeners">
+            function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>removeAllListeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter.prototype.removeListener">
+            function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>removeListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.events.EventEmitter.prototype.setMaxListeners">
+            function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>setMaxListeners
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.events" id="apidoc.module.events">module events</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.events.events" id="apidoc.element.events.events">
+        function <span class="apidocSignatureSpan"></span>events
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  this._events = this._events || {};
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter" id="apidoc.element.events.EventEmitter">
+        function <span class="apidocSignatureSpan">events.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  this._events = this._events || {};
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.events.listenerCount" id="apidoc.element.events.listenerCount">
+        function <span class="apidocSignatureSpan">events.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  return emitter.listenerCount(type);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.events.EventEmitter" id="apidoc.module.events.EventEmitter">module events.EventEmitter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter.EventEmitter" id="apidoc.element.events.EventEmitter.EventEmitter">
+        function <span class="apidocSignatureSpan">events.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  this._events = this._events || {};
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter.listenerCount" id="apidoc.element.events.EventEmitter.listenerCount">
+        function <span class="apidocSignatureSpan">events.EventEmitter.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  return emitter.listenerCount(type);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.events.EventEmitter.prototype" id="apidoc.module.events.EventEmitter.prototype">module events.EventEmitter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter.prototype.addListener" id="apidoc.element.events.EventEmitter.prototype.addListener">
+        function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>addListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addListener = function (type, listener) {
+  var m;
+
+  if (!isFunction(listener))
+    throw TypeError(&#x27;listener must be a function&#x27;);
+
+  if (!this._events)
+    this._events = {};
+
+  // To avoid recursion in the case that type === &#x22;newListener&#x22;! Before
+  // adding it to the listeners, first emit &#x22;newListener&#x22;.
+  if (this._events.newListener)
+    this.emit(&#x27;newListener&#x27;, type,
+              isFunction(listener.listener) ?
+              listener.listener : listener);
+
+  if (!this._events[type])
+    // Optimize the case of one listener. Don&#x27;t need the extra array object.
+    this._events[type] = listener;
+  else if (isObject(this._events[type]))
+    // If we&#x27;ve already got an array, just append.
+    this._events[type].push(listener);
+  else
+    // Adding the second element, need to change to array.
+    this._events[type] = [this._events[type], listener];
+
+  // Check for listener leak
+  if (isObject(this._events[type]) &#x26;&#x26; !this._events[type].warned) {
+    if (!isUndefined(this._maxListeners)) {
+      m = this._maxListeners;
+    } else {
+      m = EventEmitter.defaultMaxListeners;
+    }
+
+    if (m &#x26;&#x26; m &#x3e; 0 &#x26;&#x26; this._events[type].length &#x3e; m) {
+      this._events[type].warned = true;
+      console.error(&#x27;(node) warning: possible EventEmitter memory &#x27; +
+                    &#x27;leak detected. %d listeners added. &#x27; +
+                    &#x27;Use emitter.setMaxListeners() to increase limit.&#x27;,
+                    this._events[type].length);
+      if (typeof console.trace === &#x27;function&#x27;) {
+        // not supported in IE 10
+        console.trace();
+      }
+    }
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter.prototype.emit" id="apidoc.element.events.EventEmitter.prototype.emit">
+        function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>emit
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emit = function (type) {
+  var er, handler, len, args, i, listeners;
+
+  if (!this._events)
+    this._events = {};
+
+  // If there is no &#x27;error&#x27; event listener then throw.
+  if (type === &#x27;error&#x27;) {
+    if (!this._events.error ||
+        (isObject(this._events.error) &#x26;&#x26; !this._events.error.length)) {
+      er = arguments[1];
+      if (er instanceof Error) {
+        throw er; // Unhandled &#x27;error&#x27; event
+      } else {
+        // At least give some kind of context to the user
+        var err = new Error(&#x27;Uncaught, unspecified &#x22;error&#x22; event. (&#x27; + er + &#x27;)&#x27;);
+        err.context = er;
+        throw err;
+      }
+    }
+  }
+
+  handler = this._events[type];
+
+  if (isUndefined(handler))
+    return false;
+
+  if (isFunction(handler)) {
+    switch (arguments.length) {
+      // fast cases
+      case 1:
+        handler.call(this);
+        break;
+      case 2:
+        handler.call(this, arguments[1]);
+        break;
+      case 3:
+        handler.call(this, arguments[1], arguments[2]);
+        break;
+      // slower
+      default:
+        args = Array.prototype.slice.call(arguments, 1);
+        handler.apply(this, args);
+    }
+  } else if (isObject(handler)) {
+    args = Array.prototype.slice.call(arguments, 1);
+    listeners = handler.slice();
+    len = listeners.length;
+    for (i = 0; i &#x3c; len; i++)
+      listeners[i].apply(this, args);
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter.prototype.listenerCount" id="apidoc.element.events.EventEmitter.prototype.listenerCount">
+        function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>listenerCount
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (type) {
+  if (this._events) {
+    var evlistener = this._events[type];
+
+    if (isFunction(evlistener))
+      return 1;
+    else if (evlistener)
+      return evlistener.length;
+  }
+  return 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter.prototype.listeners" id="apidoc.element.events.EventEmitter.prototype.listeners">
+        function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>listeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listeners = function (type) {
+  var ret;
+  if (!this._events || !this._events[type])
+    ret = [];
+  else if (isFunction(this._events[type]))
+    ret = [this._events[type]];
+  else
+    ret = this._events[type].slice();
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter.prototype.on" id="apidoc.element.events.EventEmitter.prototype.on">
+        function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>on
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (type, listener) {
+  var m;
+
+  if (!isFunction(listener))
+    throw TypeError(&#x27;listener must be a function&#x27;);
+
+  if (!this._events)
+    this._events = {};
+
+  // To avoid recursion in the case that type === &#x22;newListener&#x22;! Before
+  // adding it to the listeners, first emit &#x22;newListener&#x22;.
+  if (this._events.newListener)
+    this.emit(&#x27;newListener&#x27;, type,
+              isFunction(listener.listener) ?
+              listener.listener : listener);
+
+  if (!this._events[type])
+    // Optimize the case of one listener. Don&#x27;t need the extra array object.
+    this._events[type] = listener;
+  else if (isObject(this._events[type]))
+    // If we&#x27;ve already got an array, just append.
+    this._events[type].push(listener);
+  else
+    // Adding the second element, need to change to array.
+    this._events[type] = [this._events[type], listener];
+
+  // Check for listener leak
+  if (isObject(this._events[type]) &#x26;&#x26; !this._events[type].warned) {
+    if (!isUndefined(this._maxListeners)) {
+      m = this._maxListeners;
+    } else {
+      m = EventEmitter.defaultMaxListeners;
+    }
+
+    if (m &#x26;&#x26; m &#x3e; 0 &#x26;&#x26; this._events[type].length &#x3e; m) {
+      this._events[type].warned = true;
+      console.error(&#x27;(node) warning: possible EventEmitter memory &#x27; +
+                    &#x27;leak detected. %d listeners added. &#x27; +
+                    &#x27;Use emitter.setMaxListeners() to increase limit.&#x27;,
+                    this._events[type].length);
+      if (typeof console.trace === &#x27;function&#x27;) {
+        // not supported in IE 10
+        console.trace();
+      }
+    }
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter.prototype.once" id="apidoc.element.events.EventEmitter.prototype.once">
+        function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>once
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">once = function (type, listener) {
+  if (!isFunction(listener))
+    throw TypeError(&#x27;listener must be a function&#x27;);
+
+  var fired = false;
+
+  function g() {
+    this.removeListener(type, g);
+
+    if (!fired) {
+      fired = true;
+      listener.apply(this, arguments);
+    }
+  }
+
+  g.listener = listener;
+  this.on(type, g);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter.prototype.removeAllListeners" id="apidoc.element.events.EventEmitter.prototype.removeAllListeners">
+        function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>removeAllListeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeAllListeners = function (type) {
+  var key, listeners;
+
+  if (!this._events)
+    return this;
+
+  // not listening for removeListener, no need to emit
+  if (!this._events.removeListener) {
+    if (arguments.length === 0)
+      this._events = {};
+    else if (this._events[type])
+      delete this._events[type];
+    return this;
+  }
+
+  // emit removeListener for all listeners on all events
+  if (arguments.length === 0) {
+    for (key in this._events) {
+      if (key === &#x27;removeListener&#x27;) continue;
+      this.removeAllListeners(key);
+    }
+    this.removeAllListeners(&#x27;removeListener&#x27;);
+    this._events = {};
+    return this;
+  }
+
+  listeners = this._events[type];
+
+  if (isFunction(listeners)) {
+    this.removeListener(type, listeners);
+  } else if (listeners) {
+    // LIFO order
+    while (listeners.length)
+      this.removeListener(type, listeners[listeners.length - 1]);
+  }
+  delete this._events[type];
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter.prototype.removeListener" id="apidoc.element.events.EventEmitter.prototype.removeListener">
+        function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>removeListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeListener = function (type, listener) {
+  var list, position, length, i;
+
+  if (!isFunction(listener))
+    throw TypeError(&#x27;listener must be a function&#x27;);
+
+  if (!this._events || !this._events[type])
+    return this;
+
+  list = this._events[type];
+  length = list.length;
+  position = -1;
+
+  if (list === listener ||
+      (isFunction(list.listener) &#x26;&#x26; list.listener === listener)) {
+    delete this._events[type];
+    if (this._events.removeListener)
+      this.emit(&#x27;removeListener&#x27;, type, listener);
+
+  } else if (isObject(list)) {
+    for (i = length; i-- &#x3e; 0;) {
+      if (list[i] === listener ||
+          (list[i].listener &#x26;&#x26; list[i].listener === listener)) {
+        position = i;
+        break;
+      }
+    }
+
+    if (position &#x3c; 0)
+      return this;
+
+    if (list.length === 1) {
+      list.length = 0;
+      delete this._events[type];
+    } else {
+      list.splice(position, 1);
+    }
+
+    if (this._events.removeListener)
+      this.emit(&#x27;removeListener&#x27;, type, listener);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.events.EventEmitter.prototype.setMaxListeners" id="apidoc.element.events.EventEmitter.prototype.setMaxListeners">
+        function <span class="apidocSignatureSpan">events.EventEmitter.prototype.</span>setMaxListeners
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setMaxListeners = function (n) {
+  if (!isNumber(n) || n &#x3c; 0 || isNaN(n))
+    throw TypeError(&#x27;n must be a positive number&#x27;);
+  this._maxListeners = n;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
